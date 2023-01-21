@@ -30,9 +30,9 @@ public class TweetModel {
   @Column(nullable = false, length = 280)
   private String text;
 
-  public TweetModel(TweetDTO tweetDTO) {
-    this.username = tweetDTO.username();
-    this.avatar = tweetDTO.avatar();
+  public TweetModel(TweetDTO tweetDTO, String username, String avatar) {
     this.text = tweetDTO.text();
+    this.username = username;
+    this.avatar = avatar;
   }
 }
